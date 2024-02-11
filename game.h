@@ -20,6 +20,7 @@ public:
     virtual ~Game();
 
     void run();
+    void update();
 };
 
 

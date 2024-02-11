@@ -59,9 +59,7 @@ void Game::run() {
       if(done) break;
 
       if (redraw && al_is_event_queue_empty(queue)) {
-        al_clear_to_color(al_map_rgb(0, 0, 50));
-        al_draw_rectangle(++x, ++y, 120, 120, al_map_rgb(200, 200, 200), 2);
-
+        update();
         al_flip_display();
         redraw = false;
       }
@@ -69,4 +67,8 @@ void Game::run() {
   }
 }
 
+void Game::update() {
+  al_clear_to_color(al_map_rgb(20, 20, 80));
+  al_draw_rectangle(20, 20, 1004, 748, al_map_rgb(200, 200, 200), 2);
+}
 
