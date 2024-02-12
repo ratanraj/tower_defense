@@ -71,4 +71,3 @@ void Game::update() {
   al_clear_to_color(al_map_rgb(20, 20, 80));
   al_draw_rectangle(20, 20, 1004, 748, al_map_rgb(200, 200, 200), 2);
 }
-
