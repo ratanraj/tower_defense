@@ -6,7 +6,7 @@ CFLAGS := $(shell pkg-config --cflags allegro-5 allegro_font-5 allegro_image-5 a
 LIBS := $(shell pkg-config --libs allegro-5 allegro_font-5 allegro_image-5 allegro_primitives-5)
 
 # Define the source files and the target executable
-SOURCES := main.cpp game.cpp
+SOURCES := main.cpp game.cpp monsters.cpp utils.cpp tower.cpp
 OBJECTS := $(SOURCES:.cpp=.o)
 TARGET := game
 

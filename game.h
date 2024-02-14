@@ -8,13 +8,7 @@
 
 #include <allegro5/timer.h>
 #include <allegro5/display.h>
-
-enum Sprite {
-  B_CANON_1,
-  B_MONSTER_A,
-  B_MONSTER_B,
-  B_MONSTER_C
-};
+#include "monsters.h"
 
 class Game {
 private:
@@ -26,13 +20,16 @@ private:
     ALLEGRO_BITMAP* monster_a;
     ALLEGRO_BITMAP* monster_b;
     ALLEGRO_BITMAP* monster_c;
+    ALLEGRO_BITMAP* monster_z;
+    ALLEGRO_BITMAP* canon_base;
+    ALLEGRO_BITMAP* canon_gun;
 public:
     Game();
     virtual ~Game();
 
+    void load_sprites();
     void run();
-
-    void blit(int x, int y, enum Sprite sprite)
+    void blit(int x, int y, enum Sprite sprite);
 };
 
 
